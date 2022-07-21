@@ -1,9 +1,12 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Application.Common.Exceptions;
 using Application.Interfaces;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
+using Domain.Models;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -25,6 +28,11 @@ namespace Application.Articles.Queries.GetUserArticleList
                 .Where(article => article.UserId == request.UserId)
                 .ProjectTo<ArticleInfoDto>(_mapper.ConfigurationProvider)
                 .ToListAsync(cancellationToken);
+
+            if(request.UserId == Guid.Empty)
+            {
+                throw new NotFoundException(nameof(User), request.UserId);
+            }
 
             return new ArticleListVm { Articles = articleQuery };
 

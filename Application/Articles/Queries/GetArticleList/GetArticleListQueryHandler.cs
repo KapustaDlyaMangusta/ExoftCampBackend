@@ -1,6 +1,8 @@
-﻿using Application.Interfaces;
+﻿using Application.Common.Exceptions;
+using Application.Interfaces;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
+using Domain.Models;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
@@ -25,7 +27,6 @@ namespace Application.Articles.Queries.GetArticleList
                 .Where(article => article.State == request.State)
                 .ProjectTo<ArticleInfoDto>(_mapper.ConfigurationProvider)
                 .ToListAsync(cancellationToken);
-
             return new ArticleListVm { Articles = articleQuery };
                 
         }
