@@ -1,5 +1,4 @@
-﻿
-namespace Infrastructure.EntityFramework
+﻿namespace Infrastructure.EntityFramework
 {
     public class DbInitializer
     {

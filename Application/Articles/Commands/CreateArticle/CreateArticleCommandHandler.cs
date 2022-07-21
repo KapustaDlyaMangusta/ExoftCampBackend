@@ -25,6 +25,7 @@ namespace Application.Articles.Commands.CreateArticle
                 Details = request.Details,
                 Content = request.Content,
                 State = State.Waiting,
+                CreationTime = null,
                 EditTime = null
             };
 

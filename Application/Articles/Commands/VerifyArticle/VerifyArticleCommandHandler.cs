@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Application.Common.Exceptions;
@@ -34,6 +31,14 @@ namespace Application.Articles.Commands.VerifyArticle
             }
 
             entity.State = request.State;
+            if(entity.CreationTime == null)
+            {
+                entity.CreationTime = DateTime.Now;
+            }
+            else
+            {
+                entity.EditTime = DateTime.Now;
+            }
 
             await _dbContext.SaveChangesAsync(cancellationToken);
 

@@ -12,6 +12,9 @@ namespace Infrastructure.ModelTypeConfiguration
             builder.HasIndex(article => article.Id).IsUnique();
             builder.Property(article => article.Title).HasMaxLength(200);
             builder.Property(article => article.Details).HasMaxLength(400);
+            builder.HasOne<User>(article => article.User)
+                .WithMany(user => user.Articles)
+                .HasForeignKey(article => article.UserId);
         }
     }
 }
