@@ -1,10 +1,6 @@
 ﻿using Application.Articles.Commands.CreateArticle;
 using Application.Common.Mappings;
 using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Blog.Dto
 {

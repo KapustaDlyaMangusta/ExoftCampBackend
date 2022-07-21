@@ -1,6 +1,7 @@
 ﻿using Application.Articles.Commands.CreateArticle;
 using Application.Articles.Commands.DeleteArticle;
 using Application.Articles.Commands.UpdateArticle;
+using Application.Articles.Commands.VerifyArticle;
 using Application.Articles.Queries;
 using Application.Articles.Queries.GetArticleContent;
 using Application.Articles.Queries.GetArticleList;
@@ -10,8 +11,6 @@ using Blog.Dto;
 using Domain.Enums;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Blog.Controllers
@@ -70,7 +69,16 @@ namespace Blog.Controllers
         {
             var command = _mapper.Map<UpdateArticleCommand>(updateArticleDto);
             command.UserId = UserId;
-            var articleId = await Mediator.Send(command);
+            await Mediator.Send(command);
+            return NoContent();
+        }
+
+        [HttpPut("VerifyArticle")]
+        public async Task<IActionResult> VerufyArticle([FromBody] VerifyArticleDto verifyArticleDto)
+        {
+            var command = _mapper.Map<VerifyArticleCommand>(verifyArticleDto);
+            command.UserId = UserId;
+            await Mediator.Send(command);
             return NoContent();
         }
 
