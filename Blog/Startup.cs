@@ -1,6 +1,7 @@
 using Application;
 using Application.Common.Mappings;
 using Application.Interfaces;
+using Blog.Middleware;
 using Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -53,6 +54,8 @@ namespace Blog
             }
 
             app.UseHttpsRedirection();
+
+            app.UseCustomExceptionHandler();
 
             app.UseRouting();
 

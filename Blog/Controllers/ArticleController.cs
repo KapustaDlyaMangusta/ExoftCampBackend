@@ -7,7 +7,7 @@ using Application.Articles.Queries.GetArticleContent;
 using Application.Articles.Queries.GetArticleList;
 using Application.Articles.Queries.GetUserArticleList;
 using AutoMapper;
-using Blog.Dto;
+using Blog.Dto.ArticleDtos;
 using Domain.Enums;
 using Microsoft.AspNetCore.Mvc;
 using System;

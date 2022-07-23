@@ -4,7 +4,7 @@ using AutoMapper;
 using Domain.Enums;
 using System;
 
-namespace Blog.Dto
+namespace Blog.Dto.ArticleDtos
 {
     public class VerifyArticleDto : IMapWith<VerifyArticleCommand>
     {

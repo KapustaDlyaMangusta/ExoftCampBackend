@@ -20,15 +20,9 @@ namespace Blog
             using (var scope = host.Services.CreateScope())
             {
                 var serviceProvider = scope.ServiceProvider;
-                try
-                {
-                    var context = serviceProvider.GetRequiredService<AppDbContext>();
-                    DbInitializer.Initialize(context);
-                }
-                catch (Exception exception)
-                {
-
-                }
+                var context = serviceProvider.GetRequiredService<AppDbContext>();
+                DbInitializer.Initialize(context);
+          
             }
 
             host.Run();
