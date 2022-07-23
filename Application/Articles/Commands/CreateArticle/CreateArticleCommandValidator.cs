@@ -3,7 +3,7 @@ using FluentValidation;
 
 namespace Application.Articles.Commands.CreateArticle
 {
-   public class CreateArticleCommandValidator : AbstractValidator<CreateArticleCommand>
+    /*public class CreateArticleCommandValidator : AbstractValidator<CreateArticleCommand>
     {
         public CreateArticleCommandValidator()
         {
@@ -17,5 +17,5 @@ namespace Application.Articles.Commands.CreateArticle
                 createArticleCommand.Content).NotEmpty();
 
         }
-    }
+    }*/
 }
