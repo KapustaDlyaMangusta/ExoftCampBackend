@@ -3,7 +3,7 @@ using System;
 
 namespace Application.Articles.Commands.DeleteArticle
 {
-    public class DeleteArticleCommandValidator : AbstractValidator<DeleteArticleCommand>
+    /*public class DeleteArticleCommandValidator : AbstractValidator<DeleteArticleCommand>
     {
         DeleteArticleCommandValidator()
         {
@@ -12,5 +12,5 @@ namespace Application.Articles.Commands.DeleteArticle
             RuleFor(createArticleCommand =>
                 createArticleCommand.Id).NotEqual(Guid.Empty);
         }
-    }
+    }*/
 }

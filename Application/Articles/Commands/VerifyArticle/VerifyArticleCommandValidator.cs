@@ -3,7 +3,7 @@ using System;
 
 namespace Application.Articles.Commands.VerifyArticle
 {
-    public class VerifyArticleCommandValidator : AbstractValidator<VerifyArticleCommand>
+    /*public class VerifyArticleCommandValidator : AbstractValidator<VerifyArticleCommand>
     {
         public VerifyArticleCommandValidator()
         {
@@ -12,5 +12,5 @@ namespace Application.Articles.Commands.VerifyArticle
             RuleFor(createArticleCommand =>
                 createArticleCommand.Id).NotEqual(Guid.Empty);
         }
-    }
+    }*/
 }

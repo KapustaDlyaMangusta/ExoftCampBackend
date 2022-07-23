@@ -20,7 +20,7 @@ namespace Blog.Controllers
     {
         private readonly IMapper _mapper;
 
-        public ArticleController(IMapper mapper) => mapper = _mapper;
+        public ArticleController(IMapper mapper) => _mapper = mapper;
 
         [HttpGet("GetListOfArticles")]
         public async Task<ActionResult<ArticleListVm>> GetList(State state)
