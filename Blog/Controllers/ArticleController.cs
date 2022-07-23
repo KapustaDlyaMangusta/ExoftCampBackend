@@ -7,7 +7,7 @@ using Application.Articles.Queries.GetArticleContent;
 using Application.Articles.Queries.GetArticleList;
 using Application.Articles.Queries.GetUserArticleList;
 using AutoMapper;
-using Blog.Dto;
+using Blog.Dto.ArticleDtos;
 using Domain.Enums;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -20,7 +20,7 @@ namespace Blog.Controllers
     {
         private readonly IMapper _mapper;
 
-        public ArticleController(IMapper mapper) => mapper = _mapper;
+        public ArticleController(IMapper mapper) => _mapper = mapper;
 
         [HttpGet("GetListOfArticles")]
         public async Task<ActionResult<ArticleListVm>> GetList(State state)

@@ -3,7 +3,7 @@ using System;
 
 namespace Application.Articles.Commands.UpdateArticle
 {
-    public class UpdateArticleCommandValidator : AbstractValidator<UpdateArticleCommand>
+    /* public class UpdateArticleCommandValidator : AbstractValidator<UpdateArticleCommand>
     {
         public UpdateArticleCommandValidator()
         {
@@ -18,5 +18,5 @@ namespace Application.Articles.Commands.UpdateArticle
             RuleFor(createArticleCommand =>
                 createArticleCommand.Content).NotEmpty();
         }
-    }
+    } */
 }

@@ -20,6 +20,7 @@ namespace Blog
             using (var scope = host.Services.CreateScope())
             {
                 var serviceProvider = scope.ServiceProvider;
+               
                 try
                 {
                     var context = serviceProvider.GetRequiredService<AppDbContext>();

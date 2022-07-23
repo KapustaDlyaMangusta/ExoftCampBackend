@@ -3,7 +3,7 @@ using Application.Common.Mappings;
 using AutoMapper;
 using System;
 
-namespace Blog.Dto
+namespace Blog.Dto.ArticleDtos
 {
     public class UpdateArticleDto : IMapWith<UpdateArticleCommand>
     {

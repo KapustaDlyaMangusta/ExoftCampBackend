@@ -2,7 +2,7 @@
 using Application.Common.Mappings;
 using AutoMapper;
 
-namespace Blog.Dto
+namespace Blog.Dto.ArticleDtos
 {
     public class CreateArticleDto : IMapWith<CreateArticleCommand>
     {

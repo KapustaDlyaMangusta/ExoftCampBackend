@@ -12,9 +12,9 @@ namespace Application
             this IServiceCollection services)
         {
             services.AddMediatR(Assembly.GetExecutingAssembly());
-            services.AddValidatorsFromAssemblies(new[] { Assembly.GetExecutingAssembly() });
-            services.AddTransient(typeof(IPipelineBehavior<,>), 
-                
+            services
+                .AddValidatorsFromAssemblies(new[] { Assembly.GetExecutingAssembly() });
+            services.AddTransient(typeof(IPipelineBehavior<,>),
                 typeof(ValidationBehavior<,>));
             return services;
         }
